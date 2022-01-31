@@ -18,7 +18,7 @@ public class Orange_login {
 	@Given("ouser is in login page")
 	public void user_is_in_login_page() {
 	String projpath = System.getProperty("user.dir");
-	System.setProperty("webdriver.chrome.driver", "D:/rashi/workspace/cucumber/src/test/resources/Driver/chromedriver.exe");
+	System.setProperty("webdriver.chrome.driver", "C:/Users/rashi.tiwari/git/bdd/src/test/resources/Driver/chromedriver.exe");
 	driver = new ChromeDriver();
 	driver.manage().window().maximize();
 	driver.get("https://opensource-demo.orangehrmlive.com/");
@@ -27,7 +27,7 @@ public class Orange_login {
 	Assert.assertEquals(title, "OrangeHRM");
 	}
 
-	@When("oenters correct (.*) and (.*)")
+	@When("^oenters correct (.*) and (.*)$")
 	public void enters_correct_if_and_password(String username, String password) throws InterruptedException {
 		driver.findElement(By.id("txtUsername")).sendKeys(username);
 		driver.findElement(By.id("txtPassword")).sendKeys(password);

@@ -23,14 +23,14 @@ public class test_pom{
 		System.out.println("Correct");
 		
 //	String projpath = System.getProperty("user.dir");
-	System.setProperty("webdriver.chrome.driver", "D:/rashi/workspace/cucumber/src/test/resources/Driver/chromedriver.exe");
+	System.setProperty("webdriver.chrome.driver", "C:/Users/rashi.tiwari/git/bdd/src/test/resources/Driver/chromedriver.exe");
 	driver = new ChromeDriver();
 	driver.manage().window().maximize();
 	driver.get("https://example.testproject.io/web/");
 	driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 	}
 
-	@When("enters correct (.*) and (.*)")
+	@When("^enters correct (.*) and (.*)$")
 	public void enters_correct_if_and_password(String username, String password) throws InterruptedException {
 		ob = new Testproject(driver);
 		ob.enter_username("Rashi");
