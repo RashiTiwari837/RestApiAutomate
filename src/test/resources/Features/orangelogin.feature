@@ -1,5 +1,5 @@
 Feature: User should be able to login
-
+@ignored
   Scenario Outline: User should login properly
     Given ouser is in login page
     When oenters correct  <username> and <password>
